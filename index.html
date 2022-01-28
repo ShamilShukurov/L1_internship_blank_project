@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif|Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <script src="jquery-3.4.1.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <title>Blank InternShip</title>
+</head>
+<body>
+    <div class="container">
+
+         <header>
+            <img src="french-azerb-ufaz-696x469.png" alt="UfazLogo" class="logo hover">
+            <h1>Internship offer form</h1>
+            <img src="Signature_Universite_Strasbourg_Unistra2_Blanc.png" alt="UnistraLogo" class="logo hover">
+         </header>
+            
+         <main>
+            <form action="exam.php" method="POST" >
+
+                <div class="progressbar-wrapper">
+                    <ul class="progressbar">
+                        <li class="active" id="icon1">Company</li>
+                        <li id="icon2">Project</li>
+                        <li id="icon3">Terms and Conditions</li>
+                    </ul>
+                </div>
+                <h1 class="step-title">Company</h1>
+                
+                <div class="page" id="step1">
+                    <div class="formCard">
+                            <div>
+                                <label for="companyName">*Company Name:</label>
+                                <p class="alert-message"></p>
+                                <input type="text" id="companyName" name="cname" placeholder="Company Name" required class="block required">
+                            </div>
+                            <h2>Contact Details</h2>
+                            <div class="flex-container">
+                                <div class="flex-element">
+                                    <label for="adress">*Adress:</label>
+                                    <p class="alert-message"></p>
+                                    <input type="text" id="adress" name="adress" placeholder="Adress" required class="block required">
+                                </div>
+                                <div class="flex-element">
+                                    <label for="telephone">*Phone Number:</label>
+                                    <p class="alert-message"></p>
+                                    <input type="text" id="telephone" name=telephone placeholder="0515151515" required class="block telephone required">
+                                </div>
+                            </div>
+                            <div>
+                                    <label for="website">Web Site:</label>
+                                    <input type="url" name="companySite" id="website" placeholder="URL of your site" class="block">
+                            </div>
+                            <h2>Company Profile</h2>
+                            <div class="flex-container" >
+                                <div class="flex-element">
+                                     <div>
+                                         <input type="radio" id="public" name="status" value="public" checked>
+                                         <label for="public">Public</label>
+                                    </div>
+                                              
+                                     <div>
+                                        <input type="radio" id="private" name="status" value="private">
+                                         <label for="private">Private</label>
+                                     </div>
+                                </div>
+
+                                <div class="flex-element">
+                                    <div>
+                                        <input type="radio" id="local" name="profile" value="local" checked>
+                                         <label for="local">Local</label>
+                                    </div>
+                                              
+                                    <div>
+                                        <input type="radio" id="international" name="profile" value="international">
+                                        <label for="international">International</label>
+                                    </div>
+                                </div>
+                                <div class="flex-element">
+                                    <div>
+                                        <input type="radio" id="small" name="size" value="small" checked>
+                                        <label for="small">Small</label>
+                                     </div>
+                                             
+                                     <div>
+                                         <input type="radio" id="medium" name="size" value="medium">
+                                         <label for="medium">Medium</label>
+                                     </div>
+                                              
+                                    <div>
+                                        <input type="radio" id="large" name="size" value="large">
+                                        <label for="large">Large</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="field">*Main Field of Activity:</label>
+                                <p class="alert-message"></p>
+                                 <input type="text" name="field" id="field" placeholder="Main Field of Activity" required class="block required">
+                            </div>
+                            <h2>Contact Person</h2>
+                            <div class="flex-container">
+                                    <div class="flex-element">
+                                        <label for="name">*Name:</label>
+                                        <p class="alert-message"></p>
+                                        <input type="text" id="name" name="name" placeholder="Name" required class="block required">
+                                    </div>
+                                    <div class="flex-element">
+                                        <label for="surname">*Surname:</label>
+                                        <p class="alert-message"></p>
+                                        <input type="text" id="surname" name="surname" placeholder="Surname" required class="block required">
+                                    </div>
+                            </div>
+
+                            <div class="flex-container">
+                                <div class="flex-element">
+                                     <label for="position">*Position:</label>
+                                     <p class="alert-message"></p>
+                                     <input type="text" id="position" name="position" placeholder="Name" required class="block required">
+                                </div>
+                                <div class="flex-element">
+                                        <label for="email">*Email:</label>
+                                        <p class="alert-message"></p>
+                                        <input type="email" id="email" name="email" placeholder="Email" required class="block required">
+                                </div>
+                            </div>
+                    </div>
+                    <div class="button-container" id="nonflex">
+                            <input type="button" class="button next hover" value="Next"> 
+                    </div>
+                </div>
+
+                <div class="page" id="step2">
+                        <div class="formCard">
+                                <div>
+                                    <label for="topic">*Suggested project / topic of the internship:</label>
+                                    <p>(brief description of tasks to be performed so that the students have 
+                                        enough information to choose your internship)</p>
+                                    <p class="alert-message"></p>
+                                    <textarea id="topic" name="topic" rows="5" cols="55" required class="required" >
+                                    </textarea>
+                                </div>
+                                <div class="number-input">
+                                    <label for="trainees">Possible number of trainees(if large project):</label>
+                                    <input type="text" id="trainees" name="trainees" class="number">
+                                    <p class="alert-message inline"></p>
+                                </div>
+                                <div>
+                                        <p class="label">UFAZ specialties of interest for the company:</p>
+                                        <p class="alert-message" id="checkbox-message"></p>
+                                        <div>
+                                            <input type="checkbox" id="CE" name="CE">
+                                             <label for="CE">Chemical Engineering</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="CS" name="CS" checked>
+                                             <label for="CS">Computer Science</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="PE" name="CE">
+                                            <label for="PE">Oil and Gas Engineering</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="geo" name="Geo">
+                                             <label for="geo"> Geosciences – Geophysics engineering</label>
+                                        </div>
+                                </div>
+
+                                <div>
+                                    <label for="department">*Company department in which the internship will be conducted:</label>
+                                    <p class="alert-message"></p>
+                                    <input type="text" id="department" name="department" placeholder="Department" required class="block required">
+                                </div>
+
+                                <div>
+                                        <label for="location">Location of  the internship (if different from company address):</label>
+                                        <input type="text" id="location" name="location" placeholder="Internship Location" class="block">
+                                </div>
+
+                        </div>
+                        <div class="button-container">
+                                <input type="button" class="button previous hover" value="Previous">
+                                <input type="button" class="button next hover" value="Next">
+                        </div>
+
+                        
+                </div>
+
+                <div class="page" id="step3">
+                        <div class="formCard">
+                            <div>
+                                <div>
+                                   <label for="internDates">Internship dates: from 02/03/2020 till:</label>
+                                       <input type="text" class="datepicker" id='internDates' required name="internDates">
+                                   
+
+
+                                </div>
+
+                                <div>
+                                    <label for="weeks">*Duration:</label>
+                                    <input type="text" id="weeks" name="weeks" required class="number"><span>weeks</span>
+                                    <p class="alert-message"></p>
+                                 </div>
+
+                            </div>
+                            <div class="flex-container">
+                                <div class="flex-element">
+                                        <div class="label">*The internship will be:</div>
+                                        <div>
+                                          <input type="radio" id="paid" name="type" value="paid">
+                                          <label for="paid">Paid</label>
+                                        </div>
+                                        
+                                        <div>
+                                          <input type="radio" checked id="notpaid" name="type" value="notpaid">
+                                          <label for="notpaid">Not Paid</label>
+                                        </div>
+                                </div>
+                                <div class="flex-element" id="paid-internship">
+                                    <label for="amount">*How much per month:</label>
+                                    <input type="number" id="amount" name="amount" class="block">
+                                    <p class="alert-message inline"></p>
+                                </div>
+                             </div>
+
+                            <div>
+                                    <p class="label">*Will the company provide insurance to the trainee(s)?</p>
+                                    <div>
+                                      <input type="radio" id="insuranceYes" name="insurance" value="yes" checked>
+                                      <label for="insuranceYes">Yes</label>
+                                    </div>
+                                    
+                                    <div>
+                                      <input type="radio" id="noInsurance" name="insurance" value="no">
+                                      <label for="noInsurance">No</label>
+                                    </div>
+                            </div>
+                            <div>
+                                    <p class="label">Main selection criteria for the company (ex: language skills, academic results, motivation letter, etc.</p>
+                                    <div id="criterias-container">
+                                        <div>
+                                            <h1>Criterias List</h1>
+                                            <input type="text" id="criteria" placeholder="Add New Criteria" maxlength="55" >
+                                            <ul id="criterias-list">
+                                                <li><span class="icon-wrapper"><i class="fas fa-trash"></i></span> CSS3,HTML5,Javascript</li>
+                                                <li><span class="icon-wrapper"><i class="fas fa-trash"></i></span> Jquery</li>
+                                            </ul>
+                                        </div>
+        
+                                        <div>
+                                            <textarea name="criterias" id="hiddenTextarea" cols="30" rows="10"></textarea>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                        <p class="label">Would the company like UFAZ administration support in selection process?</p>
+                                        <div>
+                                          <input type="radio" id="selectionYes" name="selection" value="yes">
+                                          <label for="selectionYes">Yes</label>
+                                        </div>
+                                        
+                                        <div>
+                                          <input type="radio" id="selectionNo" name="selection" value="no" checked>
+                                          <label for="selectionNo">No</label>
+                                        </div>
+                                </div>
+                                <div id="support">
+                                    <label for="supportText"> *What kind of support is expected from UFAZ?(ex: CV screening, interviews):</label>
+                                    <p class="alert-message"></p>
+                                    <textarea id="supportText" name="support" rows="5" cols="55" >
+                                    </textarea>                                   
+                                </div>
+                            </div>
+                            <div>    
+                                <div>
+                                    <label for="cvnum">*Maximum number of CVs that can be sent by UFAZ to the company for the pre-selection:</label>
+                                    <p class="alert-message"></p>
+                                    <input type="text" name="cvnum" id="cvnum" required class="block number required">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                        <label for="comment">Other Comments:(ex. any specific procedures to be done before being accepted to the internship?)</label>
+                                        <p class="alert-message"></p>
+                                        <textarea id="comment" name="comment" rows="5" cols="55" >
+                                        </textarea>                                   
+                                </div>                               
+                            </div>
+
+                        </div>
+                        <div class="button-container">
+                                <input type="button" class="button previous hover" value="Previous">
+                            <input type="submit" class="button submit hover" value="Submit">
+                        </div>
+                </div>
+            </form>
+
+         </main>
+
+         <aside>
+                <h2>News</h2>
+                <div class="newscard">
+                    <img src="IMG-0952-Original_HbOvZ1y.jpg" alt="news image">
+                    <a href="#"><p class="newstitle">Baker Hughes Company representatives delivered a lecture to UFAZ Petroleum students</p></a>
+                    <p>2019-12-04</p>
+                </div>
+
+                <div class="newscard">
+                        <img src="IMG-0952-Original_HbOvZ1y.jpg" alt="news image">
+                        <a href="#"><p class="newstitle">Baker Hughes Company representatives delivered a lecture to UFAZ Petroleum students</p></a>
+                        <p>2019-12-04</p>
+                 </div>
+
+                 <div class="newscard">
+                        <img src="IMG-0952-Original_HbOvZ1y.jpg" alt="news image">
+                        <a href="#"><p class="newstitle">Baker Hughes Company representatives delivered a lecture to UFAZ Petroleum students</p></a> 
+                        <p>2019-12-04</p>
+                </div>
+         </aside>
+       
+
+         <footer>
+             <div class="contact">
+                 <h1>Contact</h1>
+                 <p>Latifa Nasibova, Head of Educational Department</p>
+                 <p>latifa.nasibova@ufaz.az</p>
+                 <p>+994 12 599 00 74</p>
+             </div>
+             <div class="social">
+                 <h1>Follow us</h1>
+                <a href="https://www.instagram.com/french_azerbaijani_university/" target="blank"><img src="instagram(1).svg" alt="insta_logo" class="icon hover"></a>
+                <a href="https://www.facebook.com/ufaz.university/" target="blank"><img src="facebook-logo.svg" alt="facebook_logo" class="icon hover"></a>
+                <a href="https://www.youtube.com/channel/UCYju9fOGsgSa9RTubt6hrUQ" target="blank"><img src="youtube.svg" alt="youtube_logo" class="icon hover"></a>
+                 
+             </div>
+         </footer>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

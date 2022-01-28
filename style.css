@@ -1,0 +1,411 @@
+header { grid-area: header; }
+main { grid-area: form;}
+aside { grid-area: news; }
+footer { grid-area: footer; }
+
+body{
+    
+      background-color:#27497F;
+font-family: 'PT Serif', serif;
+
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    'header header header header header'
+    'form form form form news'
+    'footer footer footer footer footer';
+  grid-gap: 1px;
+
+  padding: 1%;
+}
+
+header,main,aside,footer{
+    background-color:#ECF1FA;
+    color: #263238;
+    padding: 1% 1%;
+    
+}
+
+
+/* *************************************************************************************** */
+/* Header Design */
+header{
+    display: flex;
+    justify-content: space-between;   
+    margin-bottom: 25px;
+    padding-bottom: 3%;
+    
+}
+
+.logo{
+    width: 130px;
+    height: auto;
+    align-self: flex-start;
+}
+header>h1{
+    text-align: center;
+    width: 340px;
+    margin: 0%;
+    padding: 0%; 
+    align-self: flex-end;
+}
+
+
+/* ************************************************************************************** */
+
+/* Footer Design */
+footer{
+    background-color: transparent;
+    color: #ECF1FA;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.social{
+    width: 50%;
+    padding-left: 7%;
+    border-left: 1px solid #ECF1FA;
+}
+
+.icon{
+    width: 45px;
+    height: auto;
+}
+/* ****************************************************************************************** */
+/* News Section */
+
+aside{
+    background-color:rgb(221, 226, 235);
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    
+}
+aside a{
+    color: #263238;
+    text-decoration: none;
+}
+.newscard{
+    width: 100%;
+    overflow: hidden;
+}
+.newscard img{
+    width: 100%;
+    height: auto;
+    transition: transform .5s ease;
+}
+.newscard:hover img {
+    transform: scale(1.1);
+  }
+  .newscard:hover p {
+    color: #007bff;;
+  }
+.newstitle{
+    font-weight: bold;
+}
+
+/* ************************************************************************ */
+
+/* Form Design */
+form{
+    width: 100%;
+}
+.step-title{
+    margin-left: 17%;
+    margin-top:100px;
+    
+}
+/* Input designs */
+input[type='text'],input[type='email'],input[type='url']{
+    font-size: 18px;
+    color: #263238;
+    background-color: #ECF1FA;
+    border:0;
+    border-bottom:1px solid  rgb(108, 117, 125);
+    width: 90%;
+    height: 40px;
+}
+
+input[name='internDates']{
+    
+    width: 30%;
+}
+input[name='weeks']{
+    
+    width: 10%;
+}
+/***************************/
+.page{
+    margin-left:15%;
+    width: 67%;
+
+    border-top: 2px solid rgb(108, 117, 125);
+}
+.formCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.formCard>div{
+    /* border: 1px solid black; */
+    margin-top: 15px;
+    margin-bottom:15px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+     justify-content: space-between;
+}
+.flex-element{
+    width: 100%;
+}
+.inline{
+    display: inline;
+}
+.block{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.alert-message{
+    font-size: 12px;
+    color: red;
+    margin-bottom: 0;
+    margin-top:0;
+}
+textarea{
+ background-color: #ECF1FA;
+}
+
+label{
+    font-weight: 500;
+    font-size: 20px;
+}
+.label{
+    font-weight: 500;
+    font-size: 20px;
+}
+    /* Criterias List Design */
+#criterias-container{
+    font-family: 'Roboto', sans-serif;
+    width: 450px;
+    margin: 0 auto;
+}
+#criterias-container div{
+
+    background-color: rgb(221, 226, 235);
+    box-shadow: 0 0 3px rgba(0, 0,0, 0.1);
+}
+#criterias-container div h1{
+    
+    background-color: #2980b9;
+    color: #ECF1FA;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: normal;
+}
+#criterias-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#criterias-list li{
+    background: #ECF1FA;
+    height: 40px;
+    line-height: 40px;
+    color: #263238;
+}
+#criterias-list li:nth-child(2n){
+    background: rgb(221, 226, 235);
+}
+#criterias-container div input{
+    font-size: 18px;
+    color: #263238;
+    background-color: rgb(221, 226, 235);
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    border: 3px solid rgba(0,0,0,0);
+    
+}
+#criterias-container div input:focus{
+    background: #fff;
+    border: 3px solid #2980b9;
+    outline: none;
+}
+.fa-plus{
+    float:right;
+}
+#criterias-list li span{
+    background: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: #ECF1FA;
+    width: 0px;
+    display: inline-block;
+    transition: 0.2s linear;
+    opacity: 0;
+
+}
+#criterias-list li:hover .icon-wrapper{
+    width:40px;
+    opacity: 1.0;
+}
+
+/* Radio Button Design */
+
+    /* Progress Bar Design */
+
+.progressbar-wrapper {
+    background: transparent;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    /* border: 1px solid black; */
+    margin-left: 14%;
+}
+
+.progressbar li {
+    /* border: 1px solid black; */
+    margin-bottom:3%;
+    list-style-type: none;
+    width: 20%;
+    float: left;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    /* text-transform: uppercase; */
+    color:  rgb(108, 117, 125);
+}
+.progressbar li:before {
+    width: 60px;
+    height: 60px;
+    content: "";
+    line-height: 60px;
+    border: 2px solid  rgb(108, 117, 125);;
+    display: block;
+    text-align: center;
+    margin: 0 auto 3px auto;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    background-color: rgb(108, 117, 125);;
+}
+.progressbar li:after {
+     width: 100%;
+     height: 2px;
+     content: '';
+     position: absolute;
+     background-color:  rgb(108, 117, 125);;
+     top: 30px;
+     left: -50%;
+     z-index: 0;
+}
+.progressbar li:first-child:after {
+     content: none;
+}
+.progressbar li.active {
+    color: #2980b9;
+    font-weight: bold;  
+    cursor: pointer;
+}
+.progressbar li.active:before {
+    border-color: #2980b9;
+    /* background: green; */
+ }
+.progressbar li.active + li:after {
+    background-color: #2980b9;
+}
+.progressbar li.active:before {
+    background: #2980b9  url(user.svg) no-repeat center center;
+    background-size: 60%;
+}
+.progressbar li::before {
+    background: rgb(108, 117, 125) url(user.svg) no-repeat center center;
+    background-size: 60%;
+}
+.progressbar {
+    counter-reset: step;
+}
+.progressbar li:before {
+    content: counter(step);
+    counter-increment: step; 
+}
+.progressbar #icon1:before{
+    font-family: "Font Awesome 5 Free";
+     font-weight: 900;
+     font-style: normal;
+     font-size: 20px;
+     color: #ECF1FA;
+    content: "\f64f";
+}
+.progressbar #icon2:before{
+    font-family: "Font Awesome 5 Free";
+     font-weight: 900;
+     font-style: normal;
+     font-size: 20px;
+     color: #ECF1FA;
+    content: "\f201";
+}
+.progressbar #icon3:before{
+    font-family: "Font Awesome 5 Free";
+     font-weight: 900;
+     font-style: normal;
+     font-size: 20px;
+     color: #ECF1FA;
+    content: "\f46d";
+}
+    /* Buttons */
+.button{
+    background-color: #2980b9;
+    color: #ECF1FA;
+    font-size: 20px;
+    width: 115px;
+    height: 50px;
+    padding: 3px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+/* .previous{
+    float: 
+} */
+.button-container{
+    /* border: 1px solid transparent; */
+    margin-top: 15px;
+    display: flex;
+    justify-content:space-between;
+}
+#nonflex{
+    display: block;
+}
+#nonflex .next{
+    float: right;
+}
+
+
+/* Hover effect */
+.hover {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hover:hover, .hover:focus, .hover:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
